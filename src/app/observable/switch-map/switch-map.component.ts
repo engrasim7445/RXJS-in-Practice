@@ -32,7 +32,7 @@ control: FormControl = new FormControl()
         this.searchService.getSearches(x)
       )
     ).subscribe(res => {
-
+   // this is
       console.log(res);
       this.searchResult = res
       this.searchCount = Object.keys(res).length
