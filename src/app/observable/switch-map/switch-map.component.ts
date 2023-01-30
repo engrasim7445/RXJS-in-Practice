@@ -30,7 +30,8 @@ control: FormControl = new FormControl()
       distinctUntilChanged(),
       switchMap( (x) =>
         this.searchService.getSearches(x)
-      )
+      )   
+      /// kljklj
     ).subscribe(res => {
    // this is
       console.log(res);
