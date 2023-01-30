@@ -1,0 +1,45 @@
+<h1>Custom Observable</h1>
+<hr>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Ex - 01 (Manual)</div>
+      <div class="card-body">
+        <ul [ngClass]="techStatus == 'complete' ? 'complete' : techStatus == 'error' ? 'error' : ''"
+        class="techList" id="container">
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Ex - 01 (Custom Interval Observable)</div>
+      <div class="card-body">
+        <ul class="techList" >
+          <li>Angular</li>
+          <li>TypeScript</li>
+          <li>HTML and CSS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row  my-3">
+  <div class="col-md-12">
+    <p class="bg-light py-2 px-3 border rounded"><strong>Random Names</strong>
+      'Muhammad', 'Asim', 'Ahsan', 'Yousuf', 'Sharib', 'Ahsan'</p>
+  </div>
+
+
+</div>
+<div>
+ <p ><strong class="text-success">Current Name</strong >: {{names}}</p>
+  <span class="badge"
+  [ngClass]="nameStatus == 'complete' ? 'text-bg-success' : nameStatus == 'error' ? 'text-bg-danger' : 'text-bg-primary' ">
+    {{nameStatus == 'complete' ? 'Success' : nameStatus == 'error' ? 'Error' : 'Running' }}</span>
+
+</div>

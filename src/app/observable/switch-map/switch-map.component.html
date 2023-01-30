@@ -1,0 +1,35 @@
+<h1>Switch Map</h1>
+<br>
+<hr>
+<h3>Search Videos</h3>
+<form>
+  <input type="text" name="searchTerm" [formControl]="control" class="form-control form-control-lg mt-3">
+
+</form>
+<br>
+<hr>
+<br>
+<div class="results">
+  <div class="d-flex justify-content-between">
+    <h4>Search Results</h4>
+    <span class="ml-auto">{{searchCount}} Results found</span>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Thumbnail</th>
+        <th scope="col">Title & Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of searchResult; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td><img src="{{item.thumb}}" style="width: 120px;"></td>
+        <td><strong>{{item.title}}</strong>
+        <p>{{item.description}}</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
